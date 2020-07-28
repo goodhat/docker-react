@@ -9,6 +9,13 @@ before_install:
 script:
   - docker run -e CI=true goodhat/docker-react npm run test
 
+deploy:
+  provider: gae
+  keyfile: $GAE_PRIVATE_KEY
+  project: docker-react-284708
+  on: 
+    branch: master
+
 # deploy:
 #   provider: elasticbeanstalk
 #   region: "us-west-2"
