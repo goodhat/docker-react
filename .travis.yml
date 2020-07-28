@@ -8,3 +8,13 @@ before_install:
 
 script:
   - docker run -e CI=true goodhat/docker-react npm run test
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-west-2"
+#   app: "docker"
+#   env: "Docker-env"
+#   bucket_name: "elasticbeanstalk-us-west-2-r3ji3vjds"
+#   bucket_path: "docker"
+#   on:
+#     branch: master
